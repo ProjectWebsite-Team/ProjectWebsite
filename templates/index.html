@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="/static/images/favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/static/css/index.css" />
+    <script
+      src="https://kit.fontawesome.com/da8beb7649.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <nav>
+      <div class="logo">
+        <img src="/static/images/covidlogo.png" alt="" class="logoimg" />
+        <h4>Covid Portal</h4>
+      </div>
+      <input type="checkbox" name="" id="click" />
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a href="/" class="active">Home</a></li>
+        <li><a href="/news">News</a></li>
+        <li><a href="/vaccination">Vaccination</a></li>
+        <li><a href="/tracker">Track Covid-19</a></li>
+        <li><a href="/medicine">Medicine</a></li>
+      </ul>
+    </nav>
+    <!-- Home Page Begins -->
+    <div class="homepage" style="background: url('/static/images/home_pg.jpg')">
+      <h1>
+        Stay<span class="alert"> Alert.</span> Control the
+        <span class="virus">Virus.</span> Save <span class="lives">Lives.</span>
+      </h1>
+      <h2>- Everything you need to know about new normal world</h2>
+    </div>
+    <!-- Cards -->
+    <div class="grid-container">
+      <div class="grid">
+        <!-- News -->
+        <div class="grid-item">
+          <div class="card">
+            <img src="/static/images/news.jfif" alt="news" class="card-img" />
+            <div class="card-content">
+              <h1 class="card-header">News</h1>
+              <p class="card-text">
+                Daily Updated News on Covid-19.
+                <br />
+                News about the safety measures you must take in this pandemic.
+              </p>
+              <button class="card-btn">
+                <a href="/news">Read more</a> <span>&rarr;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Plasma Donation -->
+        <div class="grid-item">
+          <div class="card">
+            <img
+              src="/static/images/med.jpg"
+              alt="Plasma Donation"
+              class="card-img"
+            />
+            <div class="card-content">
+              <h1 class="card-header">Medicine Supplies</h1>
+              <p class="card-text">
+                List medicine supplies for covid-19 (medicine, immunity
+                boosters, etc.)
+                <br />
+                Once your profile is created, buyers can contact you.
+                <button class="card-btn">
+                  <a href="/medicine">Read more </a>
+                  <span>&rarr;</span>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Vaccination -->
+        <div class="grid-item">
+          <div class="card">
+            <img
+              src="/static/images/vaccine.jfif"
+              alt="Vaccination"
+              class="card-img"
+            />
+            <div class="card-content">
+              <h1 class="card-header">Vaccination</h1>
+              <p class="card-text">
+                All the details you need to know about Covid-19 Vaccination.
+                <br />
+                FAQs, Videos and guidelines about Vaccination.
+              </p>
+              <button class="card-btn">
+                <a href="/vaccination"> Read more</a>
+                <span>&rarr;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer  (home page)-->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>About Us</h4>
+            <p>
+              Covid Portal is a website that serves the purpose of informing the
+              users about the latest details of covid-19, chatbot service
+              developed for your questions on the virus, live covid trackers,
+              vaccination details, and many more.
+            </p>
+            <p>
+              Our main purpose is to help people know about the latest news and
+              guidelines about the virus and providing verified information,
+              guidelines and resources so that people can stay safe.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Navigate</h4>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/news">News</a></li>
+              <li><a href="/vaccinatiom">Vaccination</a></li>
+              <li><a href="/tracker">Track Covid-19</a></li>
+              <li><a href="/medicine">Medicine</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+              <li>
+                <a href="#"
+                  ><i class="far fa-envelope"></i> covidportal2021@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <!-- Chatbot -->
+  <script type="text/javascript">
+    (function (d, m) {
+      var kommunicateSettings = {
+        appId: "36d8c97bdddb3b907940c7b65b0afc94b",
+        popupWidget: true,
+        automaticChatOpenOnNavigation: true,
+        onInit: function () {
+          var style = document.createElement("style");
+          var classSettings =
+            ".change-kommunicate-iframe-height{height:70%!important;width: 390px!important;box-shadow: rgba(0, 0, 0, 0.3) 0px 1.5rem 2rem!important;max-height:calc(100% - 30px) !important;}";
+          style.type = "text/css";
+          style.innerHTML = classSettings;
+          document.getElementsByTagName("head")[0].appendChild(style);
+          KommunicateGlobal.document
+            .getElementById("mck-sidebox-launcher")
+            .addEventListener("click", function () {
+              var testClick = parent.document.getElementById(
+                "kommunicate-widget-iframe"
+              );
+              testClick.classList.add("change-kommunicate-iframe-height");
+            });
+          KommunicateGlobal.document
+            .getElementById("km-chat-widget-close-button")
+            .addEventListener("click", function () {
+              var testClick = parent.document.getElementById(
+                "kommunicate-widget-iframe"
+              );
+              testClick.classList.remove("change-kommunicate-iframe-height");
+            });
+        },
+      };
+
+      var s = document.createElement("script");
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+      var h = document.getElementsByTagName("head")[0];
+      h.appendChild(s);
+      window.kommunicate = m;
+      m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+    /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+  </script>
+</html>

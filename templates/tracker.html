@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covid-19 Tracker</title>
+    <link
+      rel="shortcut icon"
+      href="/static/images/favicon.png"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/da8beb7649.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- nav bar -->
+    <nav>
+      <div class="logo">
+        <img src="/static/images/covidlogo.png" alt="" class="logoimg" />
+        <h4>Covid Portal</h4>
+      </div>
+      <input type="checkbox" name="" id="click" />
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/news">News</a></li>
+        <li><a href="/vaccination">Vaccination</a></li>
+        <li><a href="/tracker" class="active">Track Covid-19</a></li>
+        <li><a href="/medicine">Medicine</a></li>
+      </ul>
+    </nav>
+    <br /><br /><br /><br />
+    <div class="tracker-page-content">
+      <div class="tracker-page-title-1">
+        <h3 class="header-text">Global cases (Total)</h3>
+      </div>
+      <div class="box-area">
+        <div class="single-box">
+          <div class="box-text">
+            Total Confirmed Cases
+            <p class="total-confirmed blue"></p>
+          </div>
+        </div>
+        <div class="single-box">
+          <div class="box-text">
+            Total Recovered Cases
+            <p class="total-recovered green"></p>
+          </div>
+        </div>
+        <div class="single-box">
+          <div class="box-text">
+            Total Death Cases
+            <p class="total-deaths red"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tracker-content">
+      <div class="tracker-title-2">
+        <h3 class="header-text">Global cases (New)</h3>
+      </div>
+      <div class="box-area">
+        <div class="single-box">
+          <div class="box-text">
+            New Confirmed Cases
+            <p class="new-confirmed blue"></p>
+          </div>
+        </div>
+        <div class="single-box">
+          <div class="box-text">
+            New Recovered Cases
+            <p class="new-recovered green"></p>
+          </div>
+        </div>
+        <div class="single-box">
+          <div class="box-text">
+            New Death Cases
+            <p class="new-deaths red"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br />
+
+    <!-- covid tracker -->
+
+    <br />
+    <h2 class="tracker-text-center">Track Covid-19</h2>
+
+    <br />
+
+    <header>
+      <div class="logo">
+        <img src="/static/images/logo.png" alt="" />
+        <p>COVID-19<br />STATS</p>
+      </div>
+    </header>
+    <main>
+      <div class="stats">
+        <div class="latest-report">
+          <div class="country">
+            <div class="name">Loading...</div>
+            <div class="change-country">change</div>
+            <div class="search-country hide">
+              <div class="search-box">
+                <input
+                  type="text"
+                  id="search-input"
+                  placeholder="Search Country..."
+                />
+                <img class="close" src="/static/images/close.svg" alt="" />
+              </div>
+              <div class="country-list"></div>
+            </div>
+          </div>
+          <div class="total-cases">
+            <div class="title">Total Cases</div>
+            <div class="value">0</div>
+            <div class="new-value">+0</div>
+          </div>
+          <div class="recovered">
+            <div class="title">Recovered</div>
+            <div class="value">0</div>
+            <div class="new-value">+0</div>
+          </div>
+          <div class="deaths">
+            <div class="title">Deaths</div>
+            <div class="value">0</div>
+            <div class="new-value">+0</div>
+          </div>
+        </div>
+        <div class="chart">
+          <canvas id="axes_line_chart"></canvas>
+        </div>
+      </div>
+    </main>
+    <!-- footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>About Us</h4>
+            <p>
+              Covid Portal is a website that serves the purpose of informing the
+              users about the latest details of covid-19, chatbot service
+              developed for your questions on the virus, live covid trackers,
+              vaccination details, and many more.
+            </p>
+            <p>
+              Our main purpose is to help people know about the latest news and
+              guidelines about the virus and providing verified information,
+              guidelines and resources so that people can stay safe.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Navigate</h4>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/news">News</a></li>
+              <li><a href="/vaccinatiom">Vaccination</a></li>
+              <li><a href="/tracker">Track Covid-19</a></li>
+              <li><a href="/medicine">Medicine</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+              <li>
+                <a href="#"
+                  ><i class="far fa-envelope"></i> covidportal2021@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+      integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      language="JavaScript"
+      src="http://www.geoplugin.net/javascript.gp"
+      type="text/javascript"
+    ></script>
+    <script src="/static/js/countries.js"></script>
+    <script src="/static/js/app.js"></script>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <script src="/static/js/tracker.js"></script>
+  </body>
+  <!-- Chatbot -->
+  <script type="text/javascript">
+    (function (d, m) {
+      var kommunicateSettings = {
+        appId: "36d8c97bdddb3b907940c7b65b0afc94b",
+        popupWidget: true,
+        automaticChatOpenOnNavigation: true,
+        onInit: function () {
+          var style = document.createElement("style");
+          var classSettings =
+            ".change-kommunicate-iframe-height{height:70%!important;width: 390px!important;box-shadow: rgba(0, 0, 0, 0.3) 0px 1.5rem 2rem!important;max-height:calc(100% - 30px) !important;}";
+          style.type = "text/css";
+          style.innerHTML = classSettings;
+          document.getElementsByTagName("head")[0].appendChild(style);
+          KommunicateGlobal.document
+            .getElementById("mck-sidebox-launcher")
+            .addEventListener("click", function () {
+              var testClick = parent.document.getElementById(
+                "kommunicate-widget-iframe"
+              );
+              testClick.classList.add("change-kommunicate-iframe-height");
+            });
+          KommunicateGlobal.document
+            .getElementById("km-chat-widget-close-button")
+            .addEventListener("click", function () {
+              var testClick = parent.document.getElementById(
+                "kommunicate-widget-iframe"
+              );
+              testClick.classList.remove("change-kommunicate-iframe-height");
+            });
+        },
+      };
+
+      var s = document.createElement("script");
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+      var h = document.getElementsByTagName("head")[0];
+      h.appendChild(s);
+      window.kommunicate = m;
+      m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+    /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+  </script>
+</html>
