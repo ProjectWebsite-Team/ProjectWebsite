@@ -1,3 +1,4 @@
+from os import name
 from flask import Flask, redirect, url_for, render_template, request
 import requests
 import random
@@ -128,9 +129,39 @@ def verify():
         return render_template('verifyotp.html')
 
 
-@app.route('/buy')
+@app.route('/buy', methods=["GET", "POST"])
 def buy():
-    return render_template('buy.html')
+    if request.method == "POST":
+        # when  buyer fills the medicine form
+        # store form data in global varaibles
+        # read data from firestore
+        # show relevant data on new page
+        global buyer_name
+        global buyer_medicines
+        global buyer_immunity_boosters
+        global buyer_other_medicine
+        global buyer_district
+        buyer_name = request.form["buyer_name"]
+        buyer_medicines = request.form.getlist('buyer_medicines')
+        buyer_immunity_boosters = request.form.getlist(
+            'buyer_immunity_boosters')
+        buyer_other_medicine = request.form["buyer_other_medicine"]
+        buyer_district = request.form["buyer_district"]
+
+        print(buyer_name)
+        print(buyer_medicines)
+        print(buyer_immunity_boosters)
+        print(buyer_other_medicine)
+        print(buyer_district)
+
+        docs = db.collection(f'{buyer_district}').where(
+            "medicines", "array_contains", "Tocilizumab").get()
+        for doc in docs:
+            print(doc.to_dict())
+        return render_template('buy.html')
+
+    else:
+        return render_template('buy.html')
 
 
 if __name__ == "__main__":
