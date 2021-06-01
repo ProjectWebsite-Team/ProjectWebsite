@@ -218,7 +218,7 @@ nav .menu-btn i {
   font-size: x-large;
   color: black;
 }
-@media (max-width: 900px) {
+@media (max-width: 1025px) {
   .cardcontainer {
     display: flex;
     flex-direction: column;
@@ -232,7 +232,7 @@ nav .menu-btn i {
     text-align: center;
   }
   .medicine-container .main h2 {
-    font-size: 24px;
+    font-size: 25px;
     text-align: center;
   }
   .medicine-container .main a {
