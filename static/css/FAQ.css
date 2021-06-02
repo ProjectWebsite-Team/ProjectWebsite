@@ -16,7 +16,19 @@ body {
 html {
   scroll-behavior: smooth;
 }
-
+.back-button {
+  position: absolute;
+  top: 50;
+  left: 0;
+  padding: 10px;
+}
+.back-button a img {
+  width: 60px;
+  height: 60px;
+  border: none;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
 /*----------------------------------------------Nav Bar----------------------------------------------*/
 
 nav {

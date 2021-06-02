@@ -14,7 +14,19 @@ body {
 html {
   scroll-behavior: smooth;
 }
-
+.back-button {
+  position: absolute;
+  top: 50;
+  left: 0;
+  padding: 10px;
+}
+.back-button a img {
+  width: 60px;
+  height: 60px;
+  border: none;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
 /*----------------------------------------------Nav Bar----------------------------------------------*/
 
 nav {
@@ -116,8 +128,8 @@ nav .menu-btn i {
   text-align: center;
   margin-top: 50px;
   margin-bottom: -10px;
-  font-family: 'Poppins',sans-serif;
-  font-weight:700;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
   font-size: 35px;
 }
 .videologo-img1 {
@@ -136,7 +148,7 @@ nav .menu-btn i {
   width: 30%;
   margin-bottom: 50px;
   transition: 0.3s;
-  background-color:white;
+  background-color: white;
   justify-content: space-evenly;
   border-radius: 20px;
   align-items: center;
@@ -150,7 +162,7 @@ nav .menu-btn i {
   text-align: center;
   font-size: 18px;
 }
-.video-img{
+.video-img {
   border-radius: 10px;
 }
 .video-text {
