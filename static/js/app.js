@@ -122,7 +122,7 @@ function updateStats() {
 
   // format dates
   dates.forEach((date) => {
-    formatedDates.push(formatDate(date));
+    formatedDates.push(date.substring(0, 10));
   });
 }
 
@@ -162,7 +162,7 @@ function axesLinearChart() {
           borderWidth: 1,
         },
       ],
-      labels: dates,
+      labels: formatedDates,
     },
     options: {
       responsive: true,
@@ -186,8 +186,4 @@ const monthsNames = [
   "Dec",
 ];
 
-function formatDate(dateString) {
-  let date = new Date(dateString);
 
-  return `${date.getDate()} ${monthsNames[date.getMonth() - 1]}`;
-}
