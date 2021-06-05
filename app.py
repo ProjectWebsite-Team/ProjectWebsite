@@ -148,13 +148,10 @@ def buy():
         # show relevant data on new page
         global buyer_name
         global buyer_medicines
-        global buyer_immunity_boosters
         global buyer_district
         global docs
         buyer_name = request.form["buyer_name"]
         buyer_medicines = request.form.getlist('buyer_medicines')
-        buyer_immunity_boosters = request.form.getlist(
-            'buyer_immunity_boosters')
         buyer_district = request.form["buyer_district"]
         docs = db.collection(f'{buyer_district}').where(
             "medicines", "array_contains_any", buyer_medicines).get()
@@ -168,8 +165,42 @@ def buy():
 
 @app.route('/medicine_seller')
 def medicine_seller():
-
     return render_template('medicinesellers.html')
+
+# route for immunity boosters
+
+
+@app.route('/buy-immunity-booster', methods=["GET", "POST"])
+def buy_immunity_booster():
+    if request.method == "POST":
+        # when  buyer fills the medicine form
+        # store form data in global varaibles
+        # read data from firestore
+        # show relevant data on new page
+        global buyer_name
+        global buyer_medicines
+        global buyer_immunity_boosters
+        global buyer_district
+        global docs
+        buyer_name = request.form["buyer_name"]
+
+        buyer_immunity_boosters = request.form.getlist(
+            'buyer_immunity_boosters')
+        buyer_district = request.form["buyer_district"]
+        docs = db.collection(f'{buyer_district}').where(
+            "immunity_boosters", "array_contains_any", buyer_immunity_boosters).get()
+        for doc in docs:
+            print(doc.to_dict())
+        return render_template('immunity-booster-sellers.html', docs=docs, buyer_district=buyer_district)
+
+    else:
+        return render_template('buy-immunity-booster.html')
+
+
+@app.route('/immunity-booster_seller')
+def immunity_booster_seller():
+
+    return render_template('immunity-booster-sellers.html')
 
 
 if __name__ == "__main__":

@@ -8,30 +8,31 @@
     <link rel="stylesheet" href="/static/css/medicineseller.css" />
   </head>
   <body>
-    <h1 class="main-heading">Medicine Sellers in {{buyer_district}}</h1>
-    {% for doc in docs %} {% set a = doc.to_dict() %}
     <div class="back-button">
-      <a href="/buy">
+      <a href="/buy-immunity-booster">
         <img src="/static/images/back.png" alt="" />
       </a>
     </div>
+    <h1 class="main-heading">Immunity Booster Sellers in {{buyer_district}}</h1>
+    {% for doc in docs %} {% set a = doc.to_dict() %}
+
     <br />
     <div class="blog-card">
       <div class="inner-part">
         <label for="" class="img">
-          <img src="/static/images/sell.jpg" alt="" />
+          <img src="/static/images/immunity-medicine.jpg" alt="" />
         </label>
         <div class="content">
           <span>Seller Details</span>
-          <div class="title">Medicine Suppliers</div>
+          <div class="title">Immunity Booster Suppliers</div>
           <div class="text">
             <p>Name: {{a["name"]}}</p>
             <p>Shop/ Company Name: {{a["company_name"]}}</p>
             <p>Address: {{a["address"]}}</p>
             <p>District: {{a["district"]}}</p>
             <p>
-              Medicines : {% set med = a["medicines"] %} {% for m in med %}
-              {{m}}, {% endfor %}
+              Immunity Booster : {% set med = a["immunity_boosters"] %} {% for i in med %}
+              {{i}}, {% endfor %}
             </p>
 
             <p>Mobile: {{a["mobile"]}}</p>

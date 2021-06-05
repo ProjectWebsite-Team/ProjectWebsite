@@ -19,6 +19,19 @@ body {
   margin: 15px;
   color: #d35400;
 }
+.back-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+}
+.back-button a img {
+  width: 60px;
+  height: 60px;
+  border: none;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
 .blog-card {
   width: 95%;
   max-width: 850px;

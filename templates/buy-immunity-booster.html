@@ -11,18 +11,20 @@
     <title>Buy Medicine</title>
     <link rel="stylesheet" href="/static/css/buy.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        a{
+            position: relative;
+            font-size: 22px;
+            font-weight: 100;
+            color: rgb(114, 28, 114);
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            
+        }
+    </style>
   </head>
-  <style>
-    a {
-      position: relative;
-      font-size: 22px;
-      font-weight: 100;
-      color: rgb(114, 28, 114);
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-  </style>
+
   <body>
     <div class="back-button">
       <a href="/medicine">
@@ -30,7 +32,7 @@
       </a>
     </div>
     <div class="container">
-      <h1>Buy Medicine Supplies</h1>
+      <h1>Buy Immunity Boosters Supplies</h1>
 
       <form action="#" method="POST">
         <div class="form-row">
@@ -40,37 +42,42 @@
             <label for="buyer_name">Enter your name</label>
           </div>
         </div>
-        <div class="input1">
-          <label for="" class="labels">SELECT MEDICINE</label>
+        
+        
+        <!--Booster-->
+        <div class="input2">
+          <label for="" class="labels">SELECT IMMUNITY BOOSTER</label>
         </div>
         <div class="form-check">
           <input
             type="checkbox"
             class="form-check-input"
-            id="Tocilizumab"
-            name="buyer_medicines"
-            value="Tocilizumab"
+            id="Limcee"
+            name="buyer_immunity_boosters"
+            value="Limcee Vitamin C Plus"
           />
-          <label class="form-check-label" for="Tocilizumab">
-            Tocilizumab
+          <label class="form-check-label" for="Limcee">
+            Limcee Vitamin C Plus
           </label>
         </div>
         <div class="form-check">
           <input
             type="checkbox"
             class="form-check-input"
-            id="FabiFlu"
-            name="buyer_medicines"
-            value="FabiFlu"
+            id="Helthoxide"
+            name="buyer_immunity_boosters"
+            value="Helthoxide Ascorbic Acid"
           />
-          <label class="form-check-label" for="FabiFlu">FabiFlu </label>
+          <label class="form-check-label" for="Helthoxide"
+            >Helthoxide Ascorbic Acid
+          </label>
         </div>
         <div class="form-check">
           <input
             type="checkbox"
             class="form-check-input"
             id="Dexamethasone"
-            name="buyer_medicines"
+            name="buyer_immunity_boosters"
             value="Dexamethasone Tablet"
           />
           <label class="form-check-label" for="Dexamethasone"
@@ -81,40 +88,69 @@
           <input
             type="checkbox"
             class="form-check-input"
-            id="manga"
-            name="buyer_medicines"
-            value="Azithral Tablet"
+            id="Life"
+            name="buyer_immunity_boosters"
+            value="vitamin-c"
           />
-          <label class="form-check-label" for="Azithral">Azithral Tablet</label>
+          <label class="form-check-label" for="Lifee"
+            >Life-C Vitamin C, Vitamin D3 And Zinc Chewable Tablets</label
+          >
         </div>
         <div class="form-check">
           <input
             type="checkbox"
             class="form-check-input"
-            id="Dolo"
-            name="buyer_medicines"
-            value="Dolo 650 MG"
+            id="Ziverdo"
+            name="buyer_immunity_boosters"
+            value="Ziverdo Kit"
           />
-          <label class="form-check-label" for="Dolo">Dolo 650 MG</label>
+          <label class="form-check-label" for="Ziverdo"
+            >Ziverdo Kit(Zinc Acetate,Doxycycline Tablets)</label
+          >
         </div>
         <div class="form-check">
           <input
             type="checkbox"
             class="form-check-input"
-            id="Calpol"
-            name="buyer_medicines"
-            value="Calpol"
+            id="Zinc"
+            name="buyer_immunity_boosters"
+            value="Zinc Sulphate Tablets"
           />
-          <label class="form-check-label" for="Calpol">Calpol</label>
+          <label class="form-check-label" for="Zinc"
+            >Zinc Sulphate Tablets (Acwis-Z)</label
+          >
         </div>
-        <br />
-
+        <div class="form-check">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="Zincovit"
+            name="buyer_immunity_boosters"
+            value="Zincovit Tablets"
+          />
+          <label class="form-check-label" for="Zincovit"
+            >Zincovit Tablets
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="Ornithine"
+            name="buyer_immunity_boosters"
+            value="L-Ornithine"
+          />
+          <label class="form-check-label" for="Ornithine"
+            >L-Ornithine - I- Aspartate Tricholine Multivitamin Syrup
+          </label>
+        </div>
+        <br>
         <div class="input3">
           <label for="" class="labels"
             >SELECT YOUR DISTRICT IN MAHARASHTRA</label
           >
         </div>
-        <br />
+        
         <div class="list1">
           <label for="buyer_district"></label>
           <select id="District" name="buyer_district" required>
@@ -156,7 +192,7 @@
             <option value="Yavatmal">Yavatmal</option>
           </select>
         </div>
-
+    
         <div class="form-row submit-btn center-align">
           <div class="input-data">
             <div class="inner"></div>
@@ -167,9 +203,7 @@
             <input type="reset" value="Reset" />
           </div>
         </div>
-        <a href="/buy-immunity-booster"
-          >Click here to buy the Immunity Boosters >></a
-        >
+        <a href="/buy">Click here to buy the Medicines >></a>
       </form>
     </div>
   </body>
