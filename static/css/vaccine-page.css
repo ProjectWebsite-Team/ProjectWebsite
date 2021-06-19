@@ -161,7 +161,7 @@ nav .menu-btn i {
   padding: 0 4rem;
 }
 .guideline-title {
-  margin-top: 50px;
+  margin-top: 30px;
   left: 550px;
   right: auto;
   text-align: center;
@@ -169,10 +169,10 @@ nav .menu-btn i {
   font-family: Poppins;
   font-weight: 700;
   font-size: 35px;
-  margin-bottom: 50px;
+  margin-bottom: 24px;
 }
 .blog-post {
-  margin-bottom: 75px;
+  margin-bottom: 50px;
   width: 100%;
   max-width: 78rem;
   padding: 30px;
@@ -235,8 +235,7 @@ nav .menu-btn i {
   .guideline-title {
     font-size: 30px;
     text-align: center;
-    padding-top: 70px;
-    margin-bottom: 50px;
+    margin-bottom: 24px;
   }
   .blog-post {
     padding-top: 30px;
@@ -286,7 +285,7 @@ nav .menu-btn i {
   width: 100%;
 }
 .process-title {
-  margin-top: 50px;
+  margin-top: 30px;
   left: 550px;
   right: auto;
   text-align: center;
@@ -296,7 +295,7 @@ nav .menu-btn i {
   color: rgb(8, 8, 51);
 }
 .box-area {
-  margin-top: 50px;
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -306,7 +305,7 @@ nav .menu-btn i {
 }
 .single-box {
   position: relative;
-  top: 15px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -315,7 +314,7 @@ nav .menu-btn i {
   height: 425px;
   border-radius: 4px;
   text-align: center;
-  margin: 10px;
+  margin: 18px;
   padding: 5px;
   transition: 0.3s;
   border-radius: 50%;
