@@ -18,6 +18,14 @@
         <img src="/static/images/back.png" alt="" />
       </a>
     </div>
+    {% if flag == 0 %}
+    <div id="center">
+      <h1 class="main-heading">
+        No immunity booster sellers found in {{buyer_district}}
+      </h1>
+      <img class="nodata" src="/static/images/no-data.jpg" alt="" />
+    </div>
+    {% endif %} {% if flag == 1 %}
     <h1 class="main-heading">Immunity Booster Sellers in {{buyer_district}}</h1>
     {% for doc in docs %} {% set a = doc.to_dict() %}
 
@@ -46,8 +54,7 @@
       </div>
     </div>
 
-    {% endfor %}
-
+    {% endfor %} {% endif %}
     <br />
   </body>
 </html>

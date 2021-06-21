@@ -150,14 +150,21 @@ def buy():
         global buyer_medicines
         global buyer_district
         global docs
+        global flag
         buyer_name = request.form["buyer_name"]
         buyer_medicines = request.form.getlist('buyer_medicines')
         buyer_district = request.form["buyer_district"]
         docs = db.collection(f'{buyer_district}').where(
             "medicines", "array_contains_any", buyer_medicines).get()
+        if docs:
+            print("data exist")
+            flag = 1
+        else:
+            print("no data")
+            flag = 0
         for doc in docs:
             print(doc.to_dict())
-        return render_template('medicinesellers.html', docs=docs, buyer_district=buyer_district)
+        return render_template('medicinesellers.html', docs=docs, buyer_district=buyer_district, flag=flag)
 
     else:
         return render_template('buy.html')
@@ -182,6 +189,7 @@ def buy_immunity_booster():
         global buyer_immunity_boosters
         global buyer_district
         global docs
+        global flag
         buyer_name = request.form["buyer_name"]
 
         buyer_immunity_boosters = request.form.getlist(
@@ -189,9 +197,15 @@ def buy_immunity_booster():
         buyer_district = request.form["buyer_district"]
         docs = db.collection(f'{buyer_district}').where(
             "immunity_boosters", "array_contains_any", buyer_immunity_boosters).get()
+        if docs:
+            print("data exist")
+            flag = 1
+        else:
+            print("no data")
+            flag = 0
         for doc in docs:
             print(doc.to_dict())
-        return render_template('immunity-booster-sellers.html', docs=docs, buyer_district=buyer_district)
+        return render_template('immunity-booster-sellers.html', docs=docs, buyer_district=buyer_district,  flag=flag)
 
     else:
         return render_template('buy-immunity-booster.html')
