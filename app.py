@@ -82,19 +82,19 @@ def register():
         a = random.randint(100000, 999999)
         print(a)
 
-        # url = "https://www.fast2sms.com/dev/bulkV2"
+        url = "https://www.fast2sms.com/dev/bulkV2"
 
-        # querystring = {"authorization": "KhTFnWoHcZYBNQU6euCPbsgt0xmlA4Swfr9VI58GDad72jy3qMDdXbCvo5IlVsh1i32WAqaGu8BgE0tc",
-        #                "sender_id": "TXTIND", "message": f"Hello, Welcome to Covid Portal. Your OTP for creating a seller account is {a}. Do not share it with any one.", "route": "v3", "numbers": f"{mobile}"}
+        querystring = {"authorization": "KhTFnWoHcZYBNQU6euCPbsgt0xmlA4Swfr9VI58GDad72jy3qMDdXbCvo5IlVsh1i32WAqaGu8BgE0tc",
+                       "sender_id": "TXTIND", "message": f"Hello, Welcome to Covid Portal. Your OTP for creating a seller account is {a}. Do not share it with any one.", "route": "v3", "numbers": f"{mobile}"}
 
-        # headers = {
-        #     'cache-control': "no-cache"
-        # }
+        headers = {
+            'cache-control': "no-cache"
+        }
 
-        # response = requests.request(
-        #     "GET", url, headers=headers, params=querystring)
+        response = requests.request(
+            "GET", url, headers=headers, params=querystring)
 
-        # print(response.text)
+        print(response.text)
 
         # redirecting to otp page to enter OTP
 
