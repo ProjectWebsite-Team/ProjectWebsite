@@ -5,52 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VIDEOS</title>
-    <link rel="stylesheet" href="/static/css/video.css">
+    <link rel="stylesheet" href="/static/css/video.css" />
     <link
-    rel="shortcut icon"
-    href="/static/images/favicon.png"
-    type="image/x-icon"
-  />
-  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-  <df-messenger
-    intent="WELCOME"
-    chat-title="Covid-19 Chatbot"
-    agent-id="bf982501-c824-4d54-9831-8697e4b1c27a"
-    chat-icon="https://assets.dryicons.com/uploads/icon/svg/6143/29a2b7cf-9413-45a3-8caf-bb973ab19dbc.svg"
-    language-code="en"
-  >
-    <style>
-      df-messenger {
-        --df-messenger-bot-message: #d8d8da;
-        --df-messenger-button-titlebar-color: #8bcac2;
-        --df-messenger-chat-background-color: #fafafa;
-        --df-messenger-font-color: white;
-        --df-messenger-send-icon: #c2ebe8;
-        --df-messenger-user-message: #7fbbb3;
-        --df-messanger-send-icon: #558288;
-      }
-    </style>
-  </df-messenger>
-  <!-- Jquery CDN -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>
-    //To minimise the height of chatbox
-    $(document).ready(function () {
-      window.addEventListener("dfMessengerLoaded", function (event) {
-        $r1 = document.querySelector("df-messenger");
-        $r2 = $r1.shadowRoot.querySelector("df-messenger-chat");
-        $r3 = $r2.shadowRoot.querySelector("df-messenger-user-input"); //for other mods
-        var sheet = new CSSStyleSheet();
-        // manage box height from here
-        sheet.replaceSync(
-          `div.chat-wrapper[opened="true"] { height: 450px }`
-        );
-        $r2.shadowRoot.adoptedStyleSheets = [sheet];
+      rel="shortcut icon"
+      href="/static/images/favicon.png"
+      type="image/x-icon"
+    />
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      intent="WELCOME"
+      chat-title="Covid-19 Chatbot"
+      agent-id="bf982501-c824-4d54-9831-8697e4b1c27a"
+      chat-icon="https://assets.dryicons.com/uploads/icon/svg/6143/29a2b7cf-9413-45a3-8caf-bb973ab19dbc.svg"
+      language-code="en"
+    >
+      <style>
+        df-messenger {
+          --df-messenger-bot-message: #d8d8da;
+          --df-messenger-button-titlebar-color: #8bcac2;
+          --df-messenger-chat-background-color: #fafafa;
+          --df-messenger-font-color: white;
+          --df-messenger-send-icon: #c2ebe8;
+          --df-messenger-user-message: #7fbbb3;
+          --df-messanger-send-icon: #558288;
+        }
+      </style>
+    </df-messenger>
+    <!-- Jquery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      //To minimise the height of chatbox
+      $(document).ready(function () {
+        window.addEventListener("dfMessengerLoaded", function (event) {
+          $r1 = document.querySelector("df-messenger");
+          $r2 = $r1.shadowRoot.querySelector("df-messenger-chat");
+          $r3 = $r2.shadowRoot.querySelector("df-messenger-user-input"); //for other mods
+          var sheet = new CSSStyleSheet();
+          // manage box height from here
+          sheet.replaceSync(
+            `div.chat-wrapper[opened="true"] { height: 450px }`
+          );
+          $r2.shadowRoot.adoptedStyleSheets = [sheet];
+        });
       });
-    });
-  </script>
+    </script>
   </head>
   <body>
+    <div class="back-button">
+      <a href="/vaccination">
+        <img src="/static/images/back.png" alt="" />
+      </a>
+    </div>
     <!------NAVBAR------->
 
     <nav>
@@ -63,7 +68,7 @@
         <i class="fas fa-bars"></i>
       </label>
       <ul>
-        <li><a href="/" >Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="/news">News</a></li>
         <li><a href="/vaccination" class="active">Vaccination</a></li>
         <li><a href="/tracker">Track Covid-19</a></li>
@@ -100,7 +105,6 @@
           <div class="card-body">
             <p class="card-text video-text">
               Understanding COVID-19 and How to Stay Safe in this pandemic.
-              
             </p>
           </div>
         </div>
@@ -155,44 +159,6 @@
           </div>
         </div>
       </div>
-      <!--<div class="row">
-        <div class="card card-7">
-          <div class="card-header">
-            <video class="video" width="100%" controls>
-              <source src="/Vaccination/static/videos/video7.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="card-body">
-            <p class="card-text video-text">
-              FAQs surrounding COVID 19 vaccine introduction. (Episode 1/3)
-            </p>
-          </div>
-        </div>
-        <div class="card card-8">
-          <div class="card-header">
-            <video class="video" width="100%" controls>
-              <source src="/Vaccination/static/videos/video8.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="card-body">
-            <p class="card-text video-text">
-              What is importance of vaccine now a days?
-            </p>
-          </div>
-        </div>
-        <!--<div class="card card-9">
-          <div class="card-header">
-            <video class="video" width="100%" controls>
-              <source src="/Vaccination/static/videos/video9.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="card-body">
-            <p class="card-text video-text">
-              FAQs surrounding COVID 19 vaccine introduction. (Episode 3/3)
-            </p>
-          </div>
-        </div>-->
-      </div>
     </div>
 
     <!------FOOTER------->
@@ -237,6 +203,5 @@
         </div>
       </div>
     </footer>
-
   </body>
 </html>

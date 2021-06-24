@@ -16,9 +16,10 @@ html {
 }
 .back-button {
   position: absolute;
-  top: 50;
+  top: 60px;
   left: 0;
   padding: 10px;
+  z-index: 2;
 }
 .back-button a img {
   width: 60px;
