@@ -7,59 +7,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vaccination</title>
   <link rel="stylesheet" href="/static/css/vaccine-page.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-  <script src="https://kit.fontawesome.com/da8beb7649.js" crossorigin="anonymous"></script>
   <link
   rel="shortcut icon"
   href="/static/images/favicon.png"
   type="image/x-icon"
 />
-<script
-      src="https://kit.fontawesome.com/da8beb7649.js"
-      crossorigin="anonymous"
-    ></script>
-    
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-    <df-messenger
-      intent="WELCOME"
-      chat-title="Covid-19 Chatbot"
-      agent-id="bf982501-c824-4d54-9831-8697e4b1c27a"
-      chat-icon="https://assets.dryicons.com/uploads/icon/svg/6143/29a2b7cf-9413-45a3-8caf-bb973ab19dbc.svg"
-        
-    
-      language-code="en"
-    >
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <script src="https://kit.fontawesome.com/da8beb7649.js" crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <df-messenger
+    intent="WELCOME"
+    chat-title="Covid-19 Chatbot"
+    agent-id="bf982501-c824-4d54-9831-8697e4b1c27a"
+    chat-icon="https://assets.dryicons.com/uploads/icon/svg/6143/29a2b7cf-9413-45a3-8caf-bb973ab19dbc.svg"
+    language-code="en"
+  >
     <style>
-        df-messenger{
-            --df-messenger-bot-message: #d8d8da;
-       --df-messenger-button-titlebar-color: #8bcac2;
-       --df-messenger-chat-background-color: #fafafa;
-       --df-messenger-font-color:white;
-       --df-messenger-send-icon: #c2ebe8;
-       --df-messenger-user-message: #7fbbb3;
-        --df-messanger-send-icon:#558288;
-        }
+      df-messenger {
+        --df-messenger-bot-message: #d8d8da;
+        --df-messenger-button-titlebar-color: #8bcac2;
+        --df-messenger-chat-background-color: #fafafa;
+        --df-messenger-font-color: white;
+        --df-messenger-send-icon: #c2ebe8;
+        --df-messenger-user-message: #7fbbb3;
+        --df-messanger-send-icon: #558288;
+      }
     </style>
-    
-    </df-messenger>
-    <!-- Jquery CDN -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        //To minimise the height of chatbox
-        $(document).ready(function() {
-            window.addEventListener('dfMessengerLoaded', function (event) {
-            $r1 = document.querySelector("df-messenger");
-            $r2 = $r1.shadowRoot.querySelector("df-messenger-chat");
-            $r3 = $r2.shadowRoot.querySelector("df-messenger-user-input"); //for other mods
-            var sheet = new CSSStyleSheet;
-            // manage box height from here
-            sheet.replaceSync( `div.chat-wrapper[opened="true"] { height: 450px }`);
-            $r2.shadowRoot.adoptedStyleSheets = [ sheet ];
-            });
-        });
-    </script>
+  </df-messenger>
+  <!-- Jquery CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    //To minimise the height of chatbox
+    $(document).ready(function () {
+      window.addEventListener("dfMessengerLoaded", function (event) {
+        $r1 = document.querySelector("df-messenger");
+        $r2 = $r1.shadowRoot.querySelector("df-messenger-chat");
+        $r3 = $r2.shadowRoot.querySelector("df-messenger-user-input"); //for other mods
+        var sheet = new CSSStyleSheet();
+        // manage box height from here
+        sheet.replaceSync(
+          `div.chat-wrapper[opened="true"] { height: 450px }`
+        );
+        $r2.shadowRoot.adoptedStyleSheets = [sheet];
+      });
+    });
+  </script>
 </head>
 
 <body>
@@ -90,7 +84,7 @@
     <h2>
       "Vaccines are safe, effective and <span class="lifesaving">lifesaving</span>."
     </h2>
-    <h3>-Vaccines save lives; fear endangers them</h3>
+    <h3>-Vaccines save lives;fear endangers them</h3>
   </div>
 
 
@@ -176,7 +170,7 @@
         <p class="blog-post__text">
         <ul class="guideline">
           <li>
-            Do not take covid-vaccine if you had tested covid positive in the
+            Donot take covid-vaccine if you had tested covid positive in the
             last recent days. Take the consultation of the Doctor in order
             to take the vaccines.
           </li>
@@ -261,14 +255,14 @@
           <p>
             In case of any query, Please follow our: <br />
             <a _ngcontent-djm-c69="300" routerlink="/FAQ.html" data-toggle="tooltip" title="FAQs on CoWIN for Citizens"
-              href="/faq">Frequently asked questions (FAQ)</a>
+              href="/templates/FAQ.html">Frequently asked questions (FAQ)</a>
           </p>
         </div>
       </div>
       <div class="cm-link-box clearfix button">
         <div class="manual-link button-class">
           <a href="https://prod-cdn.preprod.co-vin.in/assets/pdf/User_Guide_Citizen%20registration_18+.pdf"
-            class="user-manual-link"  style="text-decoration: none" target="_blank">
+            class="user-manual-link" ; style="text-decoration: none">
             <button type="button" class="btn btn-outline-light btn-1">
               Know how to book your appointment
             </button>
@@ -276,7 +270,7 @@
         </div>
         <div class="manual-link cm-dos-link button-class">
           <a href="https://prod-cdn.preprod.co-vin.in/assets/pdf/Dos_and_Donts_for_Citizens.pdf"
-            class="user-manual-link"  style="text-decoration: none" target="_blank" >
+            class="user-manual-link" ; style="text-decoration: none" ;>
             <button type="button" class="btn btn-outline-light btn-2">
               Do's and Don'ts
             </button>
@@ -299,175 +293,77 @@
       <div class="carousel owl-carousel">
         <div class="card card-1">
           <div class="card-header">
-            <a
-                href="javascript:;"
-                onclick="window.open('https://www.youtube.com/watch?v=uWGTciX795o&list=PL3WPVIFUi8gBZB2M6omc63-3jBZIcFPPi&index=1', 'YT',  'width=600,height=400');"
-                data-ga-trigger="ga-event-tracking"
-                data-ga-event-category="Video Gallery"
-                data-ga-event-action="Click"
-                data-ga-event-label="FAQs surrounding COVID 19 vaccine introduction. (Episode 1/3)"
-              >
-                <img class="video-img" src="/static/images/video1.png" width="100%" style="height: 200px;"/>
-              </a>
+            <video class="video" width="100%" controls>
+              <source src="/static/videos/video1.mp4" type="video/mp4" />
+            </video>
           </div>
           <div class="card-body">
             <p class="card-text video-text">
-              How vaccine work against the COVID-19 is simplified by the science.
+              How vaccine work againsts COVID-19 Science,Simplified
             </p>
           </div>
         </div>
         <div class="card card-2">
           <div class="card-header">
-            <a
-            href="javascript:;"
-            onclick="window.open('https://www.youtube.com/watch?v=XmA0-_e2gpQ&list=PL3WPVIFUi8gBZB2M6omc63-3jBZIcFPPi&index=2', 'YT',  'width=600,height=400');"
-            data-ga-trigger="ga-event-tracking"
-            data-ga-event-category="Video Gallery"
-            data-ga-event-action="Click"
-            data-ga-event-label="FAQs surrounding COVID 19 vaccine introduction. (Episode 1/3)"
-          >
-            <img class="video-img" src="/static/images/video2.png" width="100%" style="height: 200px;"/>
-          </a>
+            <video class="video" width="100%" controls>
+              <source src="/static/videos/video2.mp4" type="video/mp4" />
+            </video>
           </div>
           <div class="card-body">
             <p class="card-text video-text">
-              #CoWIN Registration detailed process using the application Agrogya Setu App.
+              #CoWIN Registration with Agrogya Setu App.
             </p>
           </div>
         </div>
         <div class="card card-3">
           <div class="card-header">
-            <a
-                href="javascript:;"
-                onclick="window.open('https://www.youtube.com/watch?v=DCdxsnRF1Fk&list=PL3WPVIFUi8gBDi-2OK3Muybl32ZrUrFAI&index=1', 'YT',  'width=600,height=400');"
-                data-ga-trigger="ga-event-tracking"
-                data-ga-event-category="Video Gallery"
-                data-ga-event-action="Click"
-                data-ga-event-label="FAQs surrounding COVID 19 vaccine introduction. (Episode 1/3)"
-              >
-                <img class="video-img" src="/static/images/video3.png" width="100%" style="height: 200px;"/>
-              </a>
+            <video class="video" width="100%" controls>
+              <source src="/static/videos/video3.mp4" type="video/mp4" />
+            </video>
           </div>
           <div class="card-body">
             <p class="card-text video-text">
-              Understanding COVID-19 and How to Stay Safe in this pandemic.
+              Understanding COVID-19 and How to Stay Safe.
             </p>
           </div>
         </div>
         <div class="card card-4">
           <div class="card-header">
-            <a
-                href="javascript:;"
-                onclick="window.open('https://www.youtube.com/watch?v=-Fdo_HT3X80&list=PL3WPVIFUi8gBDi-2OK3Muybl32ZrUrFAI&index=2', 'YT',  'width=600,height=400');"
-                data-ga-trigger="ga-event-tracking"
-                data-ga-event-category="Video Gallery"
-                data-ga-event-action="Click"
-                data-ga-event-label="FAQs surrounding COVID 19 vaccine introduction. (Episode 1/3)"
-              >
-                <img class="video-img" src="/static/images/video4.png" width="100%" style="height: 200px;"/>
-              </a>
+            <video class="video" width="100%" controls>
+              <source src="/static/videos/video4.mp4" type="video/mp4" />
+            </video>
           </div>
           <div class="card-body">
             <p class="card-text video-text">
-              COVID-19 Everyday Precautions and few protective tips.
+              Short film on Precautions during covid-19
             </p>
           </div>
         </div>
         <div class="card card-5">
           <div class="card-header">
-            <a
-                href="javascript:;"
-                onclick="window.open('https://www.youtube.com/watch?v=xVu_I6WCsto&list=PL3WPVIFUi8gBDi-2OK3Muybl32ZrUrFAI&index=3', 'YT',  'width=600,height=400');"
-                data-ga-trigger="ga-event-tracking"
-                data-ga-event-category="Video Gallery"
-                data-ga-event-action="Click"
-                data-ga-event-label="FAQs surrounding COVID 19 vaccine introduction. (Episode 1/3)"
-              >
-                <img class="video-img" src="/static/images/video5.png" width="100%" style="height: 200px;"/>
-              </a>
+            <video class="video" width="100%" controls>
+              <source src="/static/videos/video5.mp4" type="video/mp4" />
+            </video>
           </div>
           <div class="card-body">
             <p class="card-text video-text">
-              10 protective tips for Staying Safe and Healthy in the Era of Covid-19.
+               protective tips for Staying Safe in the Era of Covid-19.
             </p>
           </div>
         </div>
         <div class="card card-6">
           <div class="card-header">
-            <a
-                href="javascript:;"
-                onclick="window.open('https://www.youtube.com/watch?v=eg1ixwE6XBw', 'YT',  'width=600,height=400');"
-                data-ga-trigger="ga-event-tracking"
-                data-ga-event-category="Video Gallery"
-                data-ga-event-action="Click"
-                data-ga-event-label="FAQs surrounding COVID 19 vaccine introduction. (Episode 1/3)"
-              >
-                <img class="video-img" src="/static/images/video6.png" width="100%" style="height: 200px;"/>
-              </a>
+            <video class="video" width="100%" controls>
+              <source src="/static/videos/video6.mp4" type="video/mp4" />
+            </video>
           </div>
           <div class="card-body">
             <p class="card-text video-text">
-              Watch and practice "HOW TO STAY SAFE IN THE PANDEMIC COVID-19".
+              Watch "SAFE STEPS OF THE PANDEMIC COVID-19".
             </p>
           </div>
         </div>
-        <div class="card card-7">
-          <div class="card-header">
-            <a
-                href="javascript:;"
-                onclick="window.open('https://www.youtube.com/watch?v=krneH_d9nd8&t', 'YT',  'width=600,height=400');"
-                data-ga-trigger="ga-event-tracking"
-                data-ga-event-category="Video Gallery"
-                data-ga-event-action="Click"
-                data-ga-event-label="FAQs surrounding COVID 19 vaccine introduction. (Episode 1/3)"
-              >
-                <img class="video-img" src="/static/images/video7.png" width="100%" style="height: 200px;"/>
-              </a>
-          </div>
-          <div class="card-body">
-            <p class="card-text video-text">
-              FAQs surrounding COVID 19 vaccine introduction. (Episode 1/3)
-            </p>
-          </div>
-        </div>
-        <div class="card card-8">
-          <div class="card-header">
-            <a
-                href="javascript:;"
-                onclick="window.open('https://www.youtube.com/watch?v=jL3Fh8yJQKo', 'YT',  'width=600,height=400');"
-                data-ga-trigger="ga-event-tracking"
-                data-ga-event-category="Video Gallery"
-                data-ga-event-action="Click"
-                data-ga-event-label="FAQs surrounding COVID 19 vaccine introduction. (Episode 1/3)"
-              >
-                <img class="video-img" src="/static/images/video8.png" width="100%" style="height: 200px;"/>
-              </a>
-          </div>
-          <div class="card-body">
-            <p class="card-text video-text">
-              FAQs surrounding COVID 19 vaccine introduction. (Episode 2/3)
-            </p>
-          </div>
-        </div>
-        <div class="card card-9">
-          <div class="card-header">
-            <a
-                href="javascript:;"
-                onclick="window.open('https://www.youtube.com/watch?v=Sc_Pjo7pnto', 'YT',  'width=600,height=400');"
-                data-ga-trigger="ga-event-tracking"
-                data-ga-event-category="Video Gallery"
-                data-ga-event-action="Click"
-                data-ga-event-label="FAQs surrounding COVID 19 vaccine introduction. (Episode 1/3)"
-              >
-                <img class="video-img" src="/static/images/video9.png" width="100%" style="height: 200px;"/>
-              </a>
-          </div>
-          <div class="card-body">
-            <p class="card-text video-text">
-              FAQs surrounding COVID 19 vaccine introduction. (Episode 3/3)
-            </p>
-          </div>
-        </div>
+        
       </div>
     </div>
   </div>
@@ -496,7 +392,7 @@
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/news">News</a></li>
-            <li><a href="/vaccination">Vaccination</a></li>
+            <li><a href="/vaccinatiom">Vaccination</a></li>
             <li><a href="/tracker">Track Covid-19</a></li>
             <li><a href="/medicine">Medicine</a></li>
           </ul>
@@ -505,11 +401,7 @@
           <h4>Contact</h4>
           <ul>
             <li>
-              <a
-              target="_top"
-              href="mailto:covidportal2021@gmail.com?subject=Regarding Covid Portal"
-              ><i class="far fa-envelope"></i> covidportal2021@gmail.com</a
-            >
+              <a href="#"><i class="far fa-envelope"></i> covidportal2021@gmail.com</a>
             </li>
           </ul>
         </div>
