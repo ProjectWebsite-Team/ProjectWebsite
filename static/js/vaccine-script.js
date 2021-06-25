@@ -15,7 +15,7 @@ const districtid = [
     { district_id: 380, district_name: "Chandrapur" },
     { district_id: 388, district_name: "Dhule" },
     { district_id: 379, district_name: "Gadchiroli" },
-    { district_id: 378, district_name: "Gondia" },
+    { district_id: 378, district_name: "Gondiya" },
     { district_id: 386, district_name: "Hingoli" },
     { district_id: 390, district_name: "Jalgaon" },
     { district_id: 396, district_name: "Jalna" },
