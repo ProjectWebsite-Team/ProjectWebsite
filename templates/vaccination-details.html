@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <link
+      rel="shortcut icon"
+      href="/static/images/favicon.png"
+      type="image/x-icon"
+    />
+    <meta charset="utf-8" />
+    <title>Vaccination Details</title>
+    <link rel="stylesheet" href="/static/css/vaccine-details.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <style>
+    a {
+      position: relative;
+      font-size: 22px;
+      font-weight: 100;
+      color: rgb(114, 28, 114);
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <div class="back-button">
+      <a href="/vaccination">
+        <img src="/static/images/back.png" alt="" />
+      </a>
+    </div>
+    <div class="container">
+      <h1>See Vaccination Schedule in your District</h1>
+
+      <form action="#">
+        <div class="list1">
+          <label for="buyer_district">
+            Select your district from Maharashtra</label
+          >
+          <select id="District" name="buyer_district" required>
+            <option value="">Choose District</option>
+            <option value="Ahmednagar">Ahmednagar</option>
+            <option value="Akola">Akola</option>
+            <option value="Amravati">Amravati</option>
+            <option value="Aurangabad">Aurangabad</option>
+            <option value="Bhandara">Bhandara</option>
+            <option value="Beed">Beed</option>
+            <option value="Buldhana">Buldhana</option>
+            <option value="Chandrapur">Chandrapur</option>
+            <option value="Dhule">Dhule</option>
+            <option value="GadChiroli">GadChiroli</option>
+            <option value="Gondiya">Gondiya</option>
+            <option value="Hingoli">Hingoli</option>
+            <option value="Jalgaon">Jalgaon</option>
+            <option value="Jalna">Jalna</option>
+            <option value="Kolhapur">Kolhapur</option>
+            <option value="Latur">Latur</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Mumbai Suburban">Mumbai Suburban</option>
+            <option value="Nagpur">Nagpur</option>
+            <option value="Nanded">Nanded</option>
+            <option value="Nandurbar">Nandurbar</option>
+            <option value="Nashik">Nashik</option>
+            <option value="Osmanabad">Osmanabad</option>
+            <option value="Parbhani">Parbhani</option>
+            <option value="Pune">Pune</option>
+            <option value="Raigad">Raigad</option>
+            <option value="Ratnagiri">Ratnagiri</option>
+            <option value="Sangli">Sangli</option>
+            <option value="Satara">Satara</option>
+            <option value="Sindhudurg">Sindhudurg</option>
+            <option value="Solapur">Solapur</option>
+            <option value="Thane">Thane</option>
+            <option value="Wardha">Wardha</option>
+            <option value="Washim">Washim</option>
+            <option value="Yavatmal">Yavatmal</option>
+          </select>
+        </div>
+        <div class="form-row center list1">
+          <label for="date" class="label-css"
+            >Select the Date for Vaccination Details</label
+          >
+          <input type="date" id="date" name="date" required />
+        </div>
+        <div class="form-row submit-btn center-align">
+          <div class="input-data">
+            <div class="inner"></div>
+            <input type="button" value="Submit" class="submit" />
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="allcards">
+      <h2>Vaccination Details</h2>
+    </div>
+    <script src="/static/js/vaccine-script.js"></script>
+  </body>
+</html>

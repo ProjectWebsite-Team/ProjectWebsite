@@ -464,7 +464,33 @@ nav .menu-btn i {
   transition: all 0.3s ease 0s;
   cursor: pointer;
 }
-
+.vaccine-container {
+  padding: 30px;
+  background-color: #f9e79f;
+  text-align: center;
+}
+.vaccine-container h1 {
+  color: #2c3e50;
+  font-family: "Poppins", sans-serif;
+  font-size: 37px;
+  margin-bottom: 20px;
+}
+.vaccine-container a {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  transition: ease-in 0.5s;
+  color: crimson;
+  font-size: 22px;
+  background-color: white;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.vaccine-container a:hover {
+  background-color: #d98880;
+  color: white;
+}
 @media (max-width: 900px) {
   .process-title {
     font-size: 30px;
@@ -523,14 +549,14 @@ a .view-button {
   padding: 14px 40px;
 }
 .view-button:hover {
-  background-color: #c6ebfc !important;
-  border: 2px solid rgb(11, 11, 32);
+  background-color: lightblue !important;
+  border: none;
   color: black !important;
   font-weight: 700 !important;
   letter-spacing: 1px;
   background: none;
-  box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
-  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  box-shadow: 0px 5px 40px -10px rgba(104, 101, 101, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(94, 92, 92, 0.57);
   transition: all 0.3s ease 0s;
   cursor: pointer;
 }

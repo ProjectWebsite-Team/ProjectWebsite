@@ -18,6 +18,11 @@ def home():
     return render_template('index.html')
 
 
+@app.route('/vaccine-details')
+def vaccine_details():
+    return render_template('vaccination-details.html')
+
+
 @app.route('/news')
 def news():
     return render_template('news.html')
