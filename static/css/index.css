@@ -176,7 +176,7 @@ nav .menu-btn i {
   cursor: pointer;
   transition: 0.3s;
   height: 37rem;
-  width: 19rem;
+  width: 24rem;
   margin: 1.2rem;
 }
 .grid-item:hover {
@@ -190,7 +190,7 @@ nav .menu-btn i {
   object-fit: cover;
 }
 .card-content {
-  padding: 1rem;
+  padding: 1.5rem;
 }
 .card-header {
   font-size: 2rem;
@@ -239,6 +239,10 @@ nav .menu-btn i {
   }
   .grid-item {
     height: 40rem;
+    width: 19rem;
+  }
+  .card-content {
+    padding: 1rem;
   }
 }
 /* Footer */
