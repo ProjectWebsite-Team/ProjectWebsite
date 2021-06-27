@@ -176,7 +176,7 @@ nav .menu-btn i {
   cursor: pointer;
   transition: 0.3s;
   height: 37rem;
-  width: 24rem;
+  width: 19rem;
   margin: 1.2rem;
 }
 .grid-item:hover {
@@ -190,7 +190,7 @@ nav .menu-btn i {
   object-fit: cover;
 }
 .card-content {
-  padding: 2rem;
+  padding: 1rem;
 }
 .card-header {
   font-size: 2rem;
