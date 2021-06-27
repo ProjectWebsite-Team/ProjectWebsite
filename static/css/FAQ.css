@@ -18,8 +18,8 @@ html {
 }
 .back-button {
   position: absolute;
-  top: 50;
-  left: 0;
+  top: 52px;
+  left: -3px;
   padding: 10px;
 }
 .back-button a img {
@@ -135,7 +135,7 @@ nav .menu-btn i {
   flex-flow: wrap;
   align-items: center;
   justify-content: center;
-  padding: 0 4rem;
+  padding: 0 1rem;
 }
 
 .course {
@@ -202,6 +202,11 @@ nav .menu-btn i {
   .info p {
     margin-bottom: 50px;
   }
+  .container {
+    width: fit-content;
+    padding: 0 1rem;
+    margin-top: 59px;
+  }
 }
 
 /*----------------------------------------------FOOTER---------------------------------------------------*/
@@ -213,7 +218,6 @@ nav .menu-btn i {
 
 .container {
   max-width: 1170px;
-  margin: auto;
 }
 .container .row .footer-col ul {
   list-style: none;
