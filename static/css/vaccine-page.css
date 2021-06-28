@@ -139,12 +139,12 @@ nav .menu-btn i {
 }
 @media screen and (max-width: 900px) {
   .homepage h2 {
-    font-size: 35px;
+    font-size: 32px;
     font-family: "Poppins", sans-serif;
     text-align: center;
   }
   .homepage h3 {
-    padding-top: 30px;
+    padding-top: 10px;
     font-size: 22px;
     text-align: center;
   }
@@ -216,16 +216,19 @@ nav .menu-btn i {
   box-shadow: 0.2rem 0.2rem 2rem 1px rgba(0, 0, 0, 0.2);
   border-radius: 0.8rem;
 }
+
+.blog-post__info {
+  margin-top: -35px;
+}
 .blog-post__title {
   font-size: 30px;
-  margin: 1.5rem 0 2rem;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   color: black;
 }
 .blog-post__info .blog-post__text {
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   color: black;
 }
 .guideline {
@@ -269,7 +272,10 @@ nav .menu-btn i {
     padding: 2.5rem;
     flex-direction: column;
   }
-
+  .cm-link-box {
+    display: flex;
+    flex-direction: column;
+  }
   .blog-post__img {
     min-width: 100%;
     max-width: 100%;
@@ -447,7 +453,7 @@ nav .menu-btn i {
   background: rgb(86, 116, 116);
   color: #ffffff !important;
   font-family: "Bree Serif";
-  font-size: 20px;
+  font-size: 23px;
   font-weight: 100;
   padding: 23px;
   border-radius: 6px;
@@ -497,11 +503,8 @@ nav .menu-btn i {
     font-size: 30px;
     text-align: center;
   }
-  .btn-1 {
-    margin-left: 10px;
-  }
-  .btn-2 {
-    margin-left: 10px;
+  .vaccine-container h1 {
+    font-size: 25px;
   }
 }
 
