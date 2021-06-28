@@ -110,7 +110,7 @@ body {
 }
 .container form .form-row {
   display: flex;
-  margin: 20px 0;
+  margin: 25px 0;
 }
 form .form-row .input-data {
   width: 100%;
@@ -244,6 +244,9 @@ select {
   .container .text1 {
     font-size: 30px;
   }
+  body {
+    padding: 8px;
+  }
   .container .textt {
     font-size: 30px;
   }
@@ -260,7 +263,10 @@ select {
   }
   .container {
     width: 95%;
-    margin: 35px;
+    margin-top: 71px;
+  }
+  .form-check {
+    margin-left: 24px;
   }
   .container h1 {
     font-size: 25px;
