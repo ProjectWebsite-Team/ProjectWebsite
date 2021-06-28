@@ -99,9 +99,7 @@ form .input2 {
   font-size: 22px;
   color: rgb(230, 166, 82);
 }
-select#District {
-  margin-left: 28px;
-}
+
 form .form-row .textarea {
   height: 70px;
 }
@@ -211,7 +209,9 @@ select {
   .container .textt {
     font-size: 30px;
   }
-
+  a {
+    font-size: 17px;
+  }
   form .form-row .input-data {
     margin: 5px 0 !important;
   }
@@ -220,7 +220,7 @@ select {
   }
   .container {
     width: 100%;
-    margin: 35px;
+    margin-top: 46px;
   }
   .container h1 {
     font-size: 30px;
@@ -263,6 +263,12 @@ select {
     margin: 3px;
   }
   .labels {
-    font-size: 19px;
+    font-size: 17px;
+  }
+  body {
+    padding: 21px;
+  }
+  a {
+    font-size: 17px;
   }
 }
