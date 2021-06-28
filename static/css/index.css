@@ -38,6 +38,7 @@ nav .logo img {
   width: 48px;
   margin-top: 5px;
   filter: invert(100%);
+  margin-left: -15px;
 }
 
 nav ul {
@@ -238,11 +239,22 @@ nav .menu-btn i {
     align-items: center;
   }
   .grid-item {
-    height: 40rem;
+    height: 37rem;
     width: 19rem;
   }
   .card-content {
     padding: 1rem;
+  }
+  .card-btn {
+    letter-spacing: normal;
+    padding: 0.26px;
+    margin: 16px;
+  }
+  nav .logo img {
+    margin-left: -16px;
+  }
+  .card-text {
+    letter-spacing: normal;
   }
 }
 /* Footer */
