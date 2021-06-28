@@ -167,12 +167,11 @@ nav .menu-btn i {
 }
 .cardcontainer .card {
   width: 43%;
-  padding: 20px;
+  padding: 17px;
   height: fit-content;
   overflow: hidden;
   border-radius: 15px;
   background-color: white;
-  margin: 25px;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
   transition: 0.3s ease;
 }
@@ -223,6 +222,7 @@ nav .menu-btn i {
   .cardcontainer {
     display: flex;
     flex-direction: column;
+    padding: 22px;
   }
   .cardcontainer .card {
     width: 100%;
