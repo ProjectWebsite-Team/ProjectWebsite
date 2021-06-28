@@ -38,6 +38,7 @@ nav .logo img {
   width: 48px;
   margin-top: 5px;
   filter: invert(100%);
+  margin-left: -15px;
 }
 
 nav ul {
