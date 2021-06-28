@@ -41,6 +41,8 @@ html body {
 .logo p {
   font-weight: bold;
   color: #6a149b;
+  margin-bottom: 15px;
+  font-size: 21px;
 }
 
 /* Nav Bar */
@@ -70,11 +72,11 @@ nav .logo h4 {
   font-weight: 100;
 }
 nav .logo img {
-  height: 46px;
-  width: 48px;
-  margin-top: 5px;
   filter: invert(100%);
-  margin-left: -15px;
+  margin-left: -36px;
+  height: 43px;
+  width: 43px;
+  margin-top: 6px;
 }
 
 nav ul {

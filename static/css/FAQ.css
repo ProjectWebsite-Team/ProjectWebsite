@@ -52,11 +52,11 @@ nav .logo h4 {
   font-weight: 100;
 }
 nav .logo img {
-  height: 46px;
-  width: 48px;
-  margin-top: 5px;
   filter: invert(100%);
   margin-left: -15px;
+  height: 43px;
+  width: 43px;
+  margin-top: 7px;
 }
 
 nav ul {
