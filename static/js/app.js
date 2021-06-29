@@ -41,7 +41,7 @@ function fetchData(country) {
     method: "GET",
     redirect: "follow",
   };
-
+  //fetching
   const api_fetch = async (country) => {
     await fetch(
       "https://api.covid19api.com/total/country/" +
