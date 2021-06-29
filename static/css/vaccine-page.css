@@ -460,8 +460,6 @@ nav .menu-btn i {
   border-radius: 6px;
   display: inline;
   transition: all 0.3s ease 0s;
-  margin-top: -26px;
-  margin-bottom: 18px;
 }
 .btn-2:hover {
   background-color: #c6fce7 !important;
