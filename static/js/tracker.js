@@ -1,7 +1,10 @@
 console.log("home page js file")
+
 async function API() {
     const url = "https://api.covid19api.com/summary";
-    const response = await fetch(url);
+    const response = await fetch(url, {
+        headers: headers,
+    });
     const data = await response.json();
     return data;
 }

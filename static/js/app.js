@@ -9,6 +9,11 @@ const new_deaths_element = document.querySelector(".deaths .new-value");
 
 const ctx = document.getElementById("axes_line_chart").getContext("2d");
 
+let headers = new Headers();
+headers.append('Content-Type', 'application/json');
+headers.append('Access-Control-Allow-Origin', '*');
+headers.append('Access-Control-Allow-Credentials', 'true');
+
 // APP VARIABLES
 let app_data = [],
   cases_list = [],
@@ -40,6 +45,7 @@ function fetchData(country) {
   var requestOptions = {
     method: "GET",
     redirect: "follow",
+    headers: headers
   };
   //fetching
   const api_fetch = async (country) => {

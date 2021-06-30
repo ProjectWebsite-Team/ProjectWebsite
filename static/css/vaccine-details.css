@@ -132,9 +132,7 @@ form .input2 {
   font-size: 22px;
   color: rgb(230, 166, 82);
 }
-select#District {
-  margin-left: 28px;
-}
+
 form .form-row .textarea {
   height: 70px;
 }
@@ -244,7 +242,10 @@ select {
   .container .textt {
     font-size: 30px;
   }
-
+  .allcards .card {
+    padding: 0px;
+    margin: 0px;
+  }
   form .form-row .input-data {
     margin: 5px 0 !important;
   }
@@ -252,19 +253,19 @@ select {
     width: 40% !important;
   }
   .container {
-    width: 100%;
-    margin: 35px;
+    width: 107%;
+    margin-top: 45px;
   }
   .allcards {
-    width: 100%;
-    margin: 35px;
+    width: 106%;
+    margin: 25px;
   }
   .list1 {
     display: flex;
     flex-direction: column;
   }
   .container h1 {
-    font-size: 30px;
+    font-size: 26px;
   }
   .container .text {
     font-size: 24px;
