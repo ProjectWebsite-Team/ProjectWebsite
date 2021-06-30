@@ -256,6 +256,9 @@ select {
     width: 107%;
     margin-top: 45px;
   }
+  #date {
+    align-self: center;
+  }
   .allcards {
     width: 106%;
     margin: 25px;
