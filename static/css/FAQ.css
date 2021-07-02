@@ -215,9 +215,6 @@ nav .menu-btn i {
   flex-wrap: wrap;
 }
 
-.container {
-  max-width: 1170px;
-}
 .container .row .footer-col ul {
   list-style: none;
 }
